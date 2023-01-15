@@ -1,0 +1,21 @@
+.details{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 1rem;
+    position: absolute;
+    top: 1030px;
+    left: 17vw;
+}
+.details>.det-img>img{
+    display: flex;
+    flex: 1;
+    width: 30vw;
+    height: 500px;
+}
+
+.details>.det-jugo{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@900&display=swap');
+
+.heading{
+    position: absolute;
+    top: 220px;
+    left: 400px;
+}
+.heading>h1{
+    font-family: 'Sofia Sans', sans-serif;
+    font-size: 40px;
+}
+input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(175, 170, 170);
+    /* border-radius: 5px; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+::-webkit-input-placeholder {
+    position: relative;
+    left: 10px;
+  }
+form{
+    display: flex;
+}
+form>div{
+    margin-left: -30px;
+    margin-top: 10px;
+}
+
+form>.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(115, 124, 115);
+    gap: 0.5rem;
+    color: white;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 100px;
+    cursor: pointer;
+}

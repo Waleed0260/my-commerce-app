@@ -1,0 +1,58 @@
+
+
+.button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blueviolet; */
+    width: 16vw;
+    height: 4.5rem;
+    border-radius: 10px;
+}
+
+.button>span:nth-of-type(1){
+    width: 30%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(119, 134, 119);
+    color: white;
+    cursor: pointer;
+}
+.button:hover>span:nth-of-type(1){
+    background-color: rgb(115, 124, 115);
+    transition: 0.4s;
+}
+
+.button>span:nth-of-type(2){
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(115, 124, 115);
+    color: white;
+
+}
+
+
+
+.button>span:nth-of-type(3){
+    width: 30%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgb(119, 134, 119);
+    color: white;
+}
+
+.button:hover>span:nth-of-type(3){
+    background-color: rgb(115, 124, 115);
+    transition: 0.4s;
+}
