@@ -1,0 +1,49 @@
+.ShopPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ShopPage>h1{
+    font-family: 'Sofia Sans', sans-serif;
+}
+.shops{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+}
+
+.shops>*{
+    margin-left: 20px;
+    border: 0.2px solid #bcc7cf;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ShopData{
+    width: 350px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+}
+
+.shop-img>img{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+}
+
+.text{
+    margin-top: -18px;
+}
+
+.text>p{
+    width: 250px;
+    font-size: 15px;
+    color: #61696e;
+}

@@ -5,6 +5,7 @@ import { FaFish, FaCat } from "react-icons/fa";
 import { TbSoup } from "react-icons/tb";
 import { MdCleaningServices } from "react-icons/md";
 import { Link } from "react-router-dom";
+import Shop from "../Shop/Shop";
 
 
 
@@ -170,6 +171,7 @@ const Aside = () => {
     setEnd(true);
   };
   return (
+    <>
     <div ref={div} className="points">
     <div className="aside">
       <aside>
@@ -331,8 +333,8 @@ const Aside = () => {
         </ul>
       </aside>
     </div>
-
     </div>
+    </>
   );
 };
 

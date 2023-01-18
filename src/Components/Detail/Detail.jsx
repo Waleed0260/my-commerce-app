@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
+import Main from '../Main/Main';
 import Button from './Button/Button';
 import "./Detail.css"
 
@@ -23,6 +24,8 @@ const Detail = () => {
 
 
   return (
+    <>
+    <Main/>
     <div className='details'>
         <div className='det-img'>
         <img src={products.image} alt="" />
@@ -34,6 +37,7 @@ const Detail = () => {
         <Button/>
         </div>
     </div>
+    </>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 import "./Shop.css"
 import Buttons from './Buttons/Buttons';
 import { Link } from 'react-router-dom';
-
+import "./Shop.css"
 
 function Box({ items }) {
 

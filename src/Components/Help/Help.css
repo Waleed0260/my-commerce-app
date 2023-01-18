@@ -1,0 +1,28 @@
+.help{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.first-block{
+    background-color: rgb(255, 255, 255);
+    width: 1000px;
+    border: 0.2px solid #bcc7cf;
+}
+.first-block>h4{
+    display: flex;
+    justify-content: space-between;
+}
+.first-block>h4>span:nth-of-type(2){
+    margin-right: 20px;
+}
+
+.first-block>*{
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.first-block>p{
+    font-size: 15px;
+    color: #61696e;
+}

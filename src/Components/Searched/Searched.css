@@ -1,8 +1,0 @@
-.shop{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    position: absolute;
-    top: 1030px;
-    left: 17vw;
-}

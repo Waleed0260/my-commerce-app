@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
-import Main from './Components/Main/Main';
-import Cards from './Components/Cards/Cards';
-import Aside from './Components/Aside/Aside';
 import { BrowserRouter } from 'react-router-dom';
 import Pages from './Components/Pages';
-
 import React from "react";
-// import Class from './Components/Class';
+import Header from './Components/Header/Header';
+import ShopPage from './Components/ShopPage/ShopPage';
+import Help from './Components/Help/Help';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 function App() {
   return (
     <div className='app'>
     <BrowserRouter>
-    <Main/>
-      <Cards/>
-      <Aside/>
+    <Header/>
       <Pages/>
+
       </BrowserRouter>
-      {/* <Class/> */}
     </div>
   );
 }

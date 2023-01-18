@@ -1,5 +1,5 @@
 .aside{
-    margin-top: 29px;
+    margin-top: 0px;
     margin-bottom: 40px;
     /* z-index: -100; */
 
@@ -20,12 +20,14 @@ aside>ul{
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 2px;
   }
   ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f0eeee; 
   }
-
+  ::-webkit-scrollbar-thumb {
+    background: rgb(110, 107, 107);
+  }
 aside>ul>li{
     list-style: none;
     color: rgb(75, 74, 72);
