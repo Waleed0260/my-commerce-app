@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@900&display=swap');
 
 .heading{
-    position: absolute;
+    /* position: absolute;
     top: 220px;
-    left: 380px;
+    left: 380px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 140px;
 }
 .heading>h1{
     font-family: 'Sofia Sans', sans-serif;
@@ -16,13 +21,17 @@ input{
     /* border-radius: 5px; */
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    background-color: rgb(255, 255, 255);
 }
 ::-webkit-input-placeholder {
     position: relative;
     left: 10px;
+    font-weight: bold;
   }
 form{
     display: flex;
+    width: 40vw;
+
 }
 form>div{
     margin-left: -30px;

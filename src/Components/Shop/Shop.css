@@ -1,7 +1,8 @@
 .shop{
+    width: 80vw;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+    grid-template-columns: auto auto auto auto;
+    gap: 1vw;
     position: absolute;
     top: 1090px;
     left: 17vw;

@@ -16,27 +16,27 @@ const Aside = () => {
 
 
 
-  const div = useRef();
+  // const div = useRef();
 
 
-  useLayoutEffect(() => {
-    console.log(div);
-    const divAnimate = div.current.getBoundingClientRect().top;
-    console.log(divAnimate);
-    const onScroll = () => {
-      if (divAnimate < window.scrollY) {
-        console.log("ok");
-        div.current.style.position = "fixed";
-        div.current.style.top = 0;
-        div.current.style.left = 0;
-        div.current.style.left = 0;
-      } else {
-        div.current.style.position = "relative";
-      }
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  // useLayoutEffect(() => {
+  //   console.log(div);
+  //   const divAnimate = div.current.getBoundingClientRect().top;
+  //   console.log(divAnimate);
+  //   const onScroll = () => {
+  //     if (divAnimate < window.scrollY) {
+  //       console.log("ok");
+  //       div.current.style.position = "fixed";
+  //       div.current.style.top = 0;
+  //       div.current.style.left = 0;
+  //       div.current.style.left = 0;
+  //     } else {
+  //       div.current.style.position = "relative";
+  //     }
+  //   };
+  //   window.addEventListener("scroll", onScroll);
+  //   return () => window.removeEventListener("scroll", onScroll);
+  // }, []);
 
 
 
@@ -172,7 +172,7 @@ const Aside = () => {
   };
   return (
     <>
-    <div ref={div} className="points">
+    <div className="points">
     <div className="aside">
       <aside>
         <ul>

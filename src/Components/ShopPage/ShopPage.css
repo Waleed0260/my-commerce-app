@@ -23,9 +23,10 @@
 }
 
 
+
 .ShopData{
     width: 350px;
-    height: 100px;
+    height: 120px;
     display: flex;
     flex-direction: row;
     gap: 1rem;
@@ -39,11 +40,12 @@
 }
 
 .text{
-    margin-top: -18px;
+    margin-top: 10px;
 }
 
 .text>p{
     width: 250px;
     font-size: 15px;
     color: #61696e;
+    margin-top: -12px;
 }

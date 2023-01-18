@@ -1,0 +1,32 @@
+.data{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 50px;
+
+}
+
+.offers{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 10px 0px;
+}
+
+.off-img>img{
+    width: 270px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.off-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 270px;
+    height: 60px;
+    background-color: white;
+    margin-top: -5px;
+}
+.off-text>p:nth-of-type(2){
+    color: #61696e;
+
+}

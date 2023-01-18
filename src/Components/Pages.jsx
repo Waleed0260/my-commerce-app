@@ -6,6 +6,7 @@ import ErrorFallback from './ErrorBoundary'
 import Help from './Help/Help'
 import Items from './Items/Items'
 import Main from './Main/Main'
+import Offers from './Offers/Offers'
 import Searched from './Searched/Searched'
 import Shop from './Shop/Shop'
 import ShopPage from './ShopPage/ShopPage'
@@ -25,6 +26,7 @@ const Pages = () => {
        <Route path="/detail/:name" element={<Detail/>}/>
         <Route path="/searched/:type" element={<Searched/>}/>
         <Route path="/ShopPage" element={<ShopPage/>}/>
+        <Route path='/offer' element={<Offers/>}/>
         <Route path="/help" element={<Help/>}/>
       </Routes>
       </ErrorBoundary>

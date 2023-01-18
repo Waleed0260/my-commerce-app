@@ -22,16 +22,18 @@
     height: 30px;
     width: 180px;
 }
+
 .seller>form{
     display: flex;
     flex-direction: column;
-
 }
 .seller>form>*{
     box-shadow: none;
+    width: 24vw;
 }
 .seller>form>input{
     border: 0.4px solid rgb(110, 108, 108);
+    border-radius: 10px;
 }
 .seller>form>input:nth-of-type(4){
     background-color: rgb(115, 124, 115);
