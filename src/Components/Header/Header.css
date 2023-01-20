@@ -32,3 +32,25 @@
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
+
+
+@media screen and (max-width:1000px) {
+    .links{
+        display: none;
+    }
+    .form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .head{
+        height: 180px;
+    }
+    .form>form{
+        margin-top: 10px;
+    }
+    .form>form>input{
+        background-color: rgb(226, 223, 223);
+    }
+}

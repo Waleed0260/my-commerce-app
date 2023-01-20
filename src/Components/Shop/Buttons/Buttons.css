@@ -60,3 +60,10 @@
     color: white;
     cursor: pointer;
 }
+
+
+@media screen and (max-width:1000px) {
+    .buttons{
+        width: 22vw;
+    }
+}

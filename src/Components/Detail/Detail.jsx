@@ -5,37 +5,69 @@ import Button from './Button/Button';
 import "./Detail.css"
 
 
-const Detail = () => {
+const Detail = ({open, items}) => {
 
     const[products, setProducts] = useState([]);
 
-    let params = useParams();
+        // let params = useParams();
 
-    const getrecipe = async()=>{
-        const url= `https://api.spoonacular.com/food/products/${params.name}?apiKey=e2d392617b924963a2edb8e0e7a61b59`
-        const response = await fetch(url);
-        const Detail = await response.json();
-        setProducts(Detail)
-    }
-    useEffect(()=>{
-        getrecipe();
-    }, [params.name])
+        const getrecipe = async()=>{
+          const url= `https://api.spoonacular.com/food/products/${items}?apiKey=e47747c220704024afb8a990b4f719f7`
+          const response = await fetch(url);
+          const Detail = await response.json();
+          setProducts(Detail)
+      }
+      useEffect(()=>{
+          getrecipe();
+      }, [items])
+
+    if(!open) return null;
+
+
+
+
+    const MODAL_STYLES = {
+      position: "fixed",
+      left: "50%",
+      top: "50%",
+      transform: "translate(-50%, -50%)",
+      backgroundColor: "#FFF",
+      // padding: "50px",
+      // zIndex: 1000,
+      border: "4px solid var(--orange)",
+      height: "600px",
+      width: "90vw"
+  }
+  const OVERLAY_STYLES = {
+      position: "fixed",
+      left: 0,
+      top: 0,
+      right: 0,
+      bottom: 0,
+      backgroundColor: "rgba(0,0,0,0.7)",
+      // zIndex: 1000
+  }
+
+
 
 
 
   return (
     <>
-    <Main/>
+    {/* <Main/> */}
+    <div style={MODAL_STYLES}>
+      <div style={OVERLAY_STYLES}>
     <div className='details'>
         <div className='det-img'>
         <img src={products.image} alt="" />
         </div>
         <div className='det-jugo'>
         <h1>{products.title}</h1>
-        {/* <span><p>{products.description.slice(0, 180)}</p></span> */}
         <b>10.00$</b>
         <Button/>
         </div>
+        </div>
+    </div>
     </div>
     </>
   )

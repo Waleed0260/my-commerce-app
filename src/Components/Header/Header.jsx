@@ -4,20 +4,39 @@ import logo from "./logo.jpg";
 import Seller from "./Seller/Seller";
 import Join from "./Join/Join";
 import { Link} from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
+import {FaSearch} from "react-icons/fa"
 
 const Header = () => {
+  const mobile = window.innerWidth <= 1000 ? true : false;
+  // const [menuOpened, setMenuOpened] = useState(false);
 
     const [seller, setSeller] = useState(false);
     const [join, setJoin] = useState(false);
 
+    const[input, setInput] = useState("");
+
+    const navigate = useNavigate();
+    const handleSubmit = (e)=>{
+      e.preventDefault();
+      navigate("/searched/" + input);
+    }
+    
   return (
     <div className="head">
+      <div className="form">
         <Link to="/">
           <div className="img">
             <img src={logo} alt="" />
           </div>
         </Link>
+        { mobile && <form action="" onSubmit={handleSubmit}>
+        <input type="text" name="" id="" value={input} onChange={(e)=> setInput(e.target.value)} placeholder='Search your grocery items here'/>
+        <button className='search'> <FaSearch/> Search</button>
+       </form>}
+       </div>
 
+       
         <div className="links">
           <ul>
             <li>

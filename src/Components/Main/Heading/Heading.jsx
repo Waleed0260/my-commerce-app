@@ -10,6 +10,7 @@ const Heading = ({title, text}) => {
 
   const navigate = useNavigate();
 
+  
 
   const handleSubmit = (e)=>{
     e.preventDefault();

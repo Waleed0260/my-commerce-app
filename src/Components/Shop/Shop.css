@@ -1,11 +1,11 @@
 .shop{
-    width: 80vw;
+    width: 83vw;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 1vw;
-    position: absolute;
-    top: 1090px;
-    left: 17vw;
+    gap: 1rem;
+    position: relative;
+    margin-top: -500px;
+    margin-left: 230px;
 }
 
 .shop-items{
@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     height: 26rem;
-    width: 16rem;
+    /* width: 16rem; */
     background-color: white;
     gap: 1rem;
     text-align: center;
@@ -28,4 +28,26 @@
 .shop-items:hover{
     margin-top: -5px;
     transition: 0.3s;
+}
+
+
+
+@media screen and (max-width:1000px) {
+    .shop{
+        width: 50rem;
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        gap: 0.6rem;
+        position: relative;
+        margin-top: -300px;
+        margin-left:50px;
+        /* z-index: -1000; */
+    }
+
+    .shop-items{
+        width: 24vw;
+    }
+    .shop-items>img{
+        width: 54rem;
+    }
 }

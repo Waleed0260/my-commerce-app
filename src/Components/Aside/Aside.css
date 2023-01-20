@@ -13,7 +13,7 @@ aside>ul{
 .points>.aside>aside{
     background-color: rgb(255, 255, 255);
     height: 32rem;
-    width: 16vw;
+    width: 13.5rem;
     margin-top: -30px;
     overflow: scroll;
     border: 0.3px solid rgb(212, 209, 209);
@@ -42,9 +42,50 @@ aside>ul>li>b>Link{
 .points{
     display: flex;
     flex-direction: row;
+    transition: 0.4s;
 }
+
+
 
 .points>.items{
     margin-left: 20px;
     margin-top: 20px;
+}
+
+.filter{
+    width: 100px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    margin: 10px 0 0 10px;
+    /* font-family: 'Sofia Sans', sans-serif; */
+
+}
+
+
+@media screen and (max-width:1000px) {
+    .points{
+        margin-left: -400px;
+        z-index: 10;
+        margin-top: -350px;
+    }
+    .points>.aside>aside{
+        width: 25rem;
+        height: 40rem;
+        margin-top: 0px;
+    }
+    .cross{
+        /* height: 20px;
+        width: 20px; */
+        margin-left: 150px;
+        position: relative;
+        top: 30px;
+        left: 200px;
+    }
+    .cross>*{
+        height: 30px;
+        width: 30px;
+        background-color: rgb(205, 202, 209);
+        border-radius: 100%;
+    }
 }
