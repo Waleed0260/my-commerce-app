@@ -31,6 +31,7 @@ const Seller = ({open, close}) => {
         padding: "50px",
         zIndex: 1000,
         border: "4px solid var(--orange)",
+        borderRadius: "10px",
         width: "25vw"
     }
     const OVERLAY_STYLES = {
@@ -50,7 +51,7 @@ const Seller = ({open, close}) => {
   return (
     <div style={OVERLAY_STYLES}>
       <div style={MODAL_STYLES}>
-        <span onClick={close} className="close"><AiOutlineClose/></span>
+      <span onClick={close} className="close"><AiOutlineClose/></span>
         <div className="seller">
             <div className="top">
             <img src={logo} alt="" />
@@ -58,7 +59,7 @@ const Seller = ({open, close}) => {
             </div>
             <form onSubmit={handleSubmit}>
             <label for="name">Name</label>
-            <input type="text" name="email" id="name" />
+            <input type="text" name="email" id="name" className='input1' />
             <br/>
             <label for="email">Email</label>
             <input type="email" name="email" id="email" required />

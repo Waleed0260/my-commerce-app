@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom';
-import Main from '../Main/Main';
 import Button from './Button/Button';
 import "./Detail.css"
 
@@ -9,10 +7,9 @@ const Detail = ({open, items}) => {
 
     const[products, setProducts] = useState([]);
 
-        // let params = useParams();
 
         const getrecipe = async()=>{
-          const url= `https://api.spoonacular.com/food/products/${items}?apiKey=e47747c220704024afb8a990b4f719f7`
+          const url= `https://api.spoonacular.com/food/products/${items}?apiKey=2777352d167849208b58bd3897cbed6e`
           const response = await fetch(url);
           const Detail = await response.json();
           setProducts(Detail)
@@ -22,7 +19,6 @@ const Detail = ({open, items}) => {
       }, [items])
 
     if(!open) return null;
-
 
 
 
@@ -44,7 +40,7 @@ const Detail = ({open, items}) => {
       top: 0,
       right: 0,
       bottom: 0,
-      backgroundColor: "rgba(0,0,0,0.7)",
+      backgroundColor: "rgb(183, 188, 190)",
       // zIndex: 1000
   }
 

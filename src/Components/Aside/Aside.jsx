@@ -1,5 +1,7 @@
 import React, { useState, useLayoutEffect, useRef } from "react";
 import "./Aside.css";
+import { Context } from "../../Context";
+import { useContext } from "react";
 import { CiApple } from "react-icons/ci";
 import { FaFish, FaCat } from "react-icons/fa";
 import { TbSoup } from "react-icons/tb";
@@ -14,9 +16,9 @@ import BottomLine from "../BottomLine/BottomLine";
 const Aside = () => {
 
 
-  const mobile = window.innerWidth <= 1000 ? true : false;
-  const [menuOpened, setMenuOpened] = useState(false);
 
+  const mobile = window.innerWidth <= 1000 ? true : false;
+  const [menuOpened, setMenuOpened] = useContext(Context);
 
 
   // const div = useRef();
@@ -320,8 +322,7 @@ const Aside = () => {
               </>
             ) : (
               ""
-            )}
-  
+            )}  
             <li style={{marginBottom: "10px"}}>
               <div onClick={handleEnd}>
                 <TbSoup /> <b><Link to="/shop/health&beauty" style={{textDecoration: "none", color: "rgb(75, 74, 72)"}}>Heath & beauty</Link></b>{" "}
@@ -343,7 +344,6 @@ const Aside = () => {
         </aside>
       </div>
       </div>
-      {mobile && <BottomLine onClick={()=> setMenuOpened(true)} />}
     </>
   );
 };

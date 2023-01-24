@@ -29,6 +29,7 @@ const Join = ({open, close}) => {
           padding: "50px",
           zIndex: 1000,
           border: "4px solid var(--orange)",
+          borderRadius: "10px",
           width: "25vw"
       }
       const OVERLAY_STYLES = {
