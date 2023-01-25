@@ -51,3 +51,16 @@
         width: 54rem;
     }
 }
+@media screen and (max-width:768px){
+    .shop{
+        width: 40rem;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .shop-items{
+        width: 41vw;
+    }
+    .shop-items>img{
+        width: 64rem;
+    }
+}

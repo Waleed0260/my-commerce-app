@@ -18,7 +18,12 @@ const Aside = () => {
 
 
   const mobile = window.innerWidth <= 1000 ? true : false;
-  const [menuOpened, setMenuOpened] = useContext(Context);
+
+  // const{menu, sell} = useContext(Context);
+  // const [menuOpened, setMenuOpened] = menu;
+  // const[seller, setSeller] = sell;
+
+  const [menuOpened, setMenuOpened] = useContext(Context)['state1'];
 
 
   // const div = useRef();

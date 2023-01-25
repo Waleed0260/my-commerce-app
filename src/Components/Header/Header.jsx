@@ -11,7 +11,7 @@ import {FaSearch} from "react-icons/fa"
 const Header = () => {
   const mobile = window.innerWidth <= 1000 ? true : false;
 
-    const [seller, setSeller] = useContext(Context);
+    const [seller, setSeller] = useContext(Context)['state2'];
     const [join, setJoin] = useState(false);
 
     const[input, setInput] = useState("");
@@ -21,6 +21,8 @@ const Header = () => {
       e.preventDefault();
       navigate("/searched/" + input);
     }
+
+    
     
   return (
     <div className="head">
@@ -36,8 +38,9 @@ const Header = () => {
        </form>}
        </div>
 
+
        
-        <div className="links">
+        {mobile || <div className="links">
           <ul>
             <li>
               <Link className="link" to="/ShopPage">Shop</Link>
@@ -49,12 +52,13 @@ const Header = () => {
           <button onClick={() => setSeller(true)}>
             <b>Become a Seller</b>
           </button>
-          <Seller open={seller} close={() => setSeller(false)} />
           <button onClick={() => setJoin(true)}>
             <b>join</b>
           </button>
-          <Join open={join} close={() => setJoin(false)} />
-        </div>
+        </div>}
+        <Seller open={seller} close={() => setSeller(false)} />
+        <Join open={join} close={() => setJoin(false)} />
+
       </div>
   )
 }

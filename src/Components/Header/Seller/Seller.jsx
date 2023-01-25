@@ -49,10 +49,11 @@ const Seller = ({open, close}) => {
 
 
   return (
-    <div style={OVERLAY_STYLES}>
-      <div style={MODAL_STYLES}>
-      <span onClick={close} className="close"><AiOutlineClose/></span>
+    <div className="overlay_styles">
+      <div className="modal_styles">
         <div className="seller">
+        <span onClick={close} className="close"><AiOutlineClose/></span>
+
             <div className="top">
             <img src={logo} alt="" />
             <em>Register new account</em>

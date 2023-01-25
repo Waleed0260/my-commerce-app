@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import "./Shop.css"
 import Buttons from './Buttons/Buttons';
-import { Link } from 'react-router-dom';
 import "./Shop.css"
 import Detail from '../Detail/Detail';
 
 function Box({ items }) {
 
     const [open, setOpen] = useState(false)
-
     return (
         <>
         <div className="shop-items" key={items.id}>
@@ -17,7 +15,7 @@ function Box({ items }) {
             <b>{items.title.slice(0, 20)}</b>
             <Buttons/>
         </div>
-        <Detail open={open} items={items.id}/>
+        <Detail open={open} items={items.id} setOpen={()=> setOpen(false)}/>
         </>
     )
 }
