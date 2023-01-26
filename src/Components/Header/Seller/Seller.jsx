@@ -51,8 +51,8 @@ const Seller = ({open, close}) => {
   return (
     <div className="overlay_styles">
       <div className="modal_styles">
+      <span onClick={close} className="close"><AiOutlineClose/></span>
         <div className="seller">
-        <span onClick={close} className="close"><AiOutlineClose/></span>
 
             <div className="top">
             <img src={logo} alt="" />

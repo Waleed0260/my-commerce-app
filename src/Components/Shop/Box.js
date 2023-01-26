@@ -10,7 +10,7 @@ function Box({ items }) {
     return (
         <>
         <div className="shop-items" key={items.id}>
-            <img src={items.image} alt="" style={{width: "14vw", height: "14rem"}} onClick={()=> setOpen(true)}/>
+            <img src={items.image} alt="" onClick={()=> setOpen(true)}/>
             <b>10.00$</b>
             <b>{items.title.slice(0, 20)}</b>
             <Buttons/>

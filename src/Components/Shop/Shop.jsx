@@ -13,7 +13,7 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
-     const url = `https://api.spoonacular.com/food/products/search?apiKey=e47747c220704024afb8a990b4f719f7&query=fruits&vegetables&number=20`
+     const url = `https://api.spoonacular.com/food/products/search?apiKey=e2d392617b924963a2edb8e0e7a61b59&query=fruits&vegetables&number=20`
     const response = await fetch(url);
     const resJson = await response.json();
     setProducts(resJson?.products);

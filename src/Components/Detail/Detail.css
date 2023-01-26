@@ -1,3 +1,24 @@
+.over_styles{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+.mod_styles{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(189, 177, 177);
+    border: 4px solid var(--orange);
+    border-radius: 10px;
+    height: 600px;
+    width: 90vw;
+}
+
 .details{
     display: flex;
     justify-content: space-between;
@@ -6,7 +27,7 @@
     /* position: absolute;
     top: 1100px;
     left: 17vw; */
-    margin: 100px 100px;
+    margin: 50px 100px;
     /* background-color: rgb(183, 188, 190); */
 }
 .details>.det-img>img{
@@ -16,7 +37,7 @@
     height: 400px;
 }
 .details>.det-img{
-    width: 500px;
+    width: 600px;
 }
 .details>.det-jugo{
     display: flex;
@@ -24,14 +45,16 @@
     gap: 1rem;
 }
 
-@media screen and (max-width:1000px) {
-    .details{
-        position: absolute;
-        top: 500px;
-        left: 2vw;
-    }
-
-    .details>.det-img>img{
-        width: 100%;
-    }
+.close-det{
+    position: relative;
+    top: 20px;
+    left: 1180px;
+}
+.close-det>*{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(43, 41, 41);
+    border-radius: 100%;
+    color: white;
+    cursor: pointer;
 }

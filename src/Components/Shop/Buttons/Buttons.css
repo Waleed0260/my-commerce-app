@@ -67,3 +67,15 @@
         width: 22vw;
     }
 }
+
+@media screen and (max-width:768px) {
+    .buttons{
+        width: 32vw;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .buttons{
+        width: 85vw;
+    }
+}

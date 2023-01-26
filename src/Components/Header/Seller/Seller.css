@@ -19,21 +19,29 @@
     border-radius: 10px;
     width: 22rem;
 }
+
 .close{
-    color: black;
+    position: relative;
+    top: -20px;
+    left: 26vw;
+}
+.close>*{
+    height: 20px;
+    width: 20px;
+    background-color: rgb(129, 120, 120);
+    border-radius: 100%;
+    color: white;
     cursor: pointer;
-    /* margin-left: 350px; */
 }
 
-.close>*{
-    height: 17px;
-    width: 16px;
-}
+
+
 .seller{
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    margin-top: -20px;
 }
 .seller>.top{
     display: flex;
@@ -49,11 +57,11 @@
 .seller>form{
     display: flex;
     flex-direction: column;
-    width: 24rem;
+    /* width: 29rem; */
 }
 .seller>form>*{
     box-shadow: none;
-    width: 21rem;
+    width: 24vw;
 }
 .seller>form>input{
     border: 0.4px solid rgb(110 108 108);
@@ -74,3 +82,18 @@
     margin-top: 10px;
 }
 
+@media screen and (max-width:900px) {
+    .close{
+        position: relative;
+        left: 49vw;
+    }
+    .modal_styles{
+        width: 46vw;
+    }
+    .seller>form{
+        width: 47vw;
+    }
+    .seller>form>*{
+        width: 43vw;
+    }
+}
