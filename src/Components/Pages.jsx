@@ -1,9 +1,8 @@
-import React, {Suspense, lazy, useState} from 'react'
+import React, {Suspense, lazy} from 'react'
 import { ErrorBoundary } from 'react-error-boundary'
 import { Routes, Route } from 'react-router-dom'
 import ErrorFallback from './ErrorBoundary'
-
-const Main = lazy(() => import('./Main/Main'));
+import Main from "./Main/Main"
 const Shop = lazy(() => import('./Shop/Shop'));
 const ShopPage = lazy(() => import('./ShopPage/ShopPage'));
 const Searched = lazy(() => import('./Searched/Searched'));
@@ -28,7 +27,7 @@ const Pages = () => {
         <Shop/>
         </>}/>
          <Route path="/shop/:type" element={<Items/>}/> 
-       <Route path="/detail/:name" element={<Detail/>}/>
+         <Route path="/detail/:name" element={<Detail/>}/>
         <Route path="/searched/:type" element={<Searched/>}/>
         <Route path="/ShopPage" element={<ShopPage/>}/>
         <Route path='/offer' element={<Offers/>}/>

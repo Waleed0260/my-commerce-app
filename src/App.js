@@ -1,11 +1,9 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
-import Pages from './Components/Pages';
-import React from "react";
-import Header from './Components/Header/Header';
-import ShopPage from './Components/ShopPage/ShopPage';
-import Help from './Components/Help/Help';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import React, {Suspense, lazy} from 'react'
+
+const Pages = lazy(() => import('./Components/Pages'));
+const Header = lazy(() => import('./Components/Header/Header'));
 
 
 

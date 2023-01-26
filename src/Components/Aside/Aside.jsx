@@ -19,34 +19,32 @@ const Aside = () => {
 
   const mobile = window.innerWidth <= 1000 ? true : false;
 
-  // const{menu, sell} = useContext(Context);
-  // const [menuOpened, setMenuOpened] = menu;
-  // const[seller, setSeller] = sell;
+
 
   const [menuOpened, setMenuOpened] = useContext(Context)['state1'];
 
 
-  // const div = useRef();
+  const div = useRef();
 
 
-  // useLayoutEffect(() => {
-  //   console.log(div);
-  //   const divAnimate = div.current.getBoundingClientRect().top;
-  //   console.log(divAnimate);
-  //   const onScroll = () => {
-  //     if (divAnimate < window.scrollY) {
-  //       console.log("ok");
-  //       div.current.style.position = "fixed";
-  //       div.current.style.top = 0;
-  //       div.current.style.left = 0;
-  //       div.current.style.left = 0;
-  //     } else {
-  //       div.current.style.position = "relative";
-  //     }
-  //   };
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, []);
+  useLayoutEffect(() => {
+    console.log(div);
+    const divAnimate = div.current.getBoundingClientRect().top;
+    console.log(divAnimate);
+    const onScroll = () => {
+      if (divAnimate < window.scrollY) {
+        console.log("ok");
+        div.current.style.position = "fixed";
+        div.current.style.top = 0;
+        div.current.style.left = 0;
+        div.current.style.left = 0;
+      } else {
+        div.current.style.position = "relative";
+      }
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
 
 
@@ -187,7 +185,7 @@ const Aside = () => {
     <> 
       {mobile && <button className="filter" onClick={()=> setMenuOpened(true)}><BsFilterLeft/> <b>Filter</b></button>}
       <div className="points" style={menuOpened ? {marginLeft: "0px", position: "relative"}: {}}>
-      <div className="aside">
+      <div className="aside" ref={div}>
         <aside>
         {mobile && <span className="cross" onClick={()=> setMenuOpened(false)}><RxCross2/></span>}
 

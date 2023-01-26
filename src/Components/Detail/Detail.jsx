@@ -11,7 +11,7 @@ const Detail = ({open, items, setOpen}) => {
 
 
         const getrecipe = async()=>{
-          const url= `https://api.spoonacular.com/food/products/${items}?apiKey=e2d392617b924963a2edb8e0e7a61b59`
+          const url= `https://api.spoonacular.com/food/products/${items}?apiKey=2777352d167849208b58bd3897cbed6e`
           const response = await fetch(url);
           const Detail = await response.json();
           setProducts(Detail)

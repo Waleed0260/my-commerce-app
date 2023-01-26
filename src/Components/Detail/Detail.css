@@ -24,11 +24,7 @@
     justify-content: space-between;
     flex-direction: row;
     gap: 1rem;
-    /* position: absolute;
-    top: 1100px;
-    left: 17vw; */
     margin: 50px 100px;
-    /* background-color: rgb(183, 188, 190); */
 }
 .details>.det-img>img{
     display: flex;
@@ -47,8 +43,8 @@
 
 .close-det{
     position: relative;
-    top: 20px;
-    left: 1180px;
+    top: 60px;
+    left: 86vw;
 }
 .close-det>*{
     height: 25px;
@@ -57,4 +53,50 @@
     border-radius: 100%;
     color: white;
     cursor: pointer;
+}
+
+
+@media screen and (max-width:768px) {
+    .details{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .details>.det-img>img{
+        width: 100%;
+        height: 400px;
+    }
+    .details>.det-img{
+        width: 50vw;
+    }
+    .close-det{
+        top: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .details{
+        margin-left: 40px;
+        margin-right: 50px;
+    }
+    .details>.det-img{
+        width: 60vw;
+    }
+    .close-det{
+        top: 20px;
+        left: 80vw;
+    }
+    .det-jugo>h1{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:380px){
+    .details{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+    .details>.det-img{
+        width: 60vw;
+    }
 }

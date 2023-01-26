@@ -11,7 +11,7 @@
 }
 
 .button>span:nth-of-type(1){
-    width: 30%;
+    width: 20%;
     height: 2.5rem;
     display: flex;
     justify-content: center;
@@ -41,7 +41,7 @@
 
 
 .button>span:nth-of-type(3){
-    width: 30%;
+    width: 20%;
     height: 2.5rem;
     display: flex;
     justify-content: center;
@@ -55,4 +55,16 @@
 .button:hover>span:nth-of-type(3){
     background-color: rgb(115, 124, 115);
     transition: 0.4s;
+}
+
+
+@media screen and (max-width:768px) {
+    .button{
+        width: 42vw;
+    }
+}
+@media screen and (max-width:480px) {
+    .button{
+        width: 52vw;
+    }
 }
