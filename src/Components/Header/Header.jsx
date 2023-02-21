@@ -7,6 +7,7 @@ import Join from "./Join/Join";
 import { Link} from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 import {FaSearch} from "react-icons/fa"
+import Cart from '../Cart/Cart';
 
 const Header = () => {
   const mobile = window.innerWidth <= 1000 ? true : false;
@@ -58,7 +59,6 @@ const Header = () => {
         </div>}
         <Seller open={seller} close={() => setSeller(false)} />
         <Join open={join} close={() => setJoin(false)} />
-
       </div>
   )
 }

@@ -13,10 +13,10 @@ const Shop = () => {
   const [products, setProducts] = useState([]);
 
   const getProducts = async () => {
-     const url = `https://api.spoonacular.com/food/products/search?apiKey=2777352d167849208b58bd3897cbed6e&query=fruits&vegetables&number=20`
+     const url = `https://api.spoonacular.com/food/products/search?apiKey=e2d392617b924963a2edb8e0e7a61b59&query=fruits&vegetables&number=20`
     const response = await fetch(url);
     const resJson = await response.json();
-    setProducts(resJson?.products);
+    setProducts(resJson.products);
   }
 
   useEffect(() => {
@@ -26,7 +26,7 @@ const Shop = () => {
   return (
     <>
       <div className='shop'>
-        {products?.map((items) => (<><Box items={items} /></>))}
+        {products ? products.map((items) => (<><Box items={items} /></>)): "Can not fetch data"}
       </div>
       {mobile && <BottomLine/>}
     </>

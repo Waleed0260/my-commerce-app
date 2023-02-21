@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import React, {Suspense, lazy} from 'react'
+import Cart from './Components/Cart/Cart';
 
 const Pages = lazy(() => import('./Components/Pages'));
 const Header = lazy(() => import('./Components/Header/Header'));

@@ -7,12 +7,14 @@ import Shop from "../Shop/Shop";
 
 import Searched from "../Searched/Searched";
 import BottomLine from "../BottomLine/BottomLine";
+import Cart from "../Cart/Cart";
 
 const Main = () => {
 
   const mobile = window.innerWidth <= 1000 ? true : false;
 
 
+  
   return (
     <>
     <div className="main">
@@ -24,6 +26,7 @@ const Main = () => {
     </div>
     <Cards/>
     <Aside/>
+    <Cart/>
     </>
   );
 };

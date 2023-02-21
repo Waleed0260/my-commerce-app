@@ -1,0 +1,23 @@
+.cart>.sidecart{
+    background-color: rgb(129, 120, 120);
+    width: 5rem;
+    height: 5rem;
+    margin: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: fixed;
+    right: -10px;
+    top: 250px;
+    z-index: 1000;
+}
+.cart>.sidecart>button{
+    background-color: white;
+    width: 4rem;
+    height: 2rem;
+    border: none;
+    border-radius: 10px;
+}

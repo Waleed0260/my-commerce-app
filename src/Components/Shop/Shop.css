@@ -87,3 +87,89 @@
         width: 15rem;
     }
 }
+
+
+
+/* buttons */
+
+
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blueviolet; */
+    width: 14vw;
+    height: 2.5rem;
+    border-radius: 10px;
+}
+
+.buttons>span:nth-of-type(1){
+    width: 20%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: rgb(245, 223, 223);
+    cursor: pointer;
+}
+.buttons:hover>span:nth-of-type(1){
+    background-color: rgb(119, 134, 119);
+    transition: 0.4s;
+    color: white;
+}
+
+.buttons>span:nth-of-type(2){
+    background-color: rgb(243, 243, 198);
+    width: 90%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.buttons:hover>span:nth-of-type(2){
+    background-color: rgb(115, 124, 115);
+    transition: 0.4s;
+    color: white;
+}
+
+.buttons>span:nth-of-type(3){
+    width: 20%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: rgb(245, 223, 223);
+
+}
+.buttons:hover>span:nth-of-type(3){
+    background-color: rgb(119, 134, 119);
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1000px) {
+    .buttons{
+        width: 22vw;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .buttons{
+        width: 32vw;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .buttons{
+        width: 85vw;
+    }
+}
