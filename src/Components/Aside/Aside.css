@@ -20,7 +20,7 @@ aside>ul{
 }
 
 ::-webkit-scrollbar {
-    width: 2px;
+    width: 1px;
   }
   ::-webkit-scrollbar-track {
     background: #f0eeee; 

@@ -7,6 +7,8 @@ import Cart from "../Cart/Cart";
 import { useStore } from "../store/store";
 import toast, { Toaster } from "react-hot-toast";
 
+
+
 function Box({ items }) {
   const [item, setItem] = useState(0);
   const [value, setValue] = useState(0);
@@ -14,18 +16,23 @@ function Box({ items }) {
   const [price, setPrice] = useState("10.00$");
   const addPizza = useStore((state) => state.addPizza);
 
-
-
   const handleRemove = (i)=>{
     setValue(value - 1)
     toast.error("Item removed")
   }
 
+  const increase = ()=>{
+    setValue(value + 1 )
+  }
+
   const addToCart = () => {
+    setValue(value + 1)
     addPizza({ ...items, price: price, quantity: value });
-    setValue(value + 1);
     toast.success("Added to cart");
   };
+
+
+
 
 
   return (
@@ -36,7 +43,7 @@ function Box({ items }) {
         <b>{items.title.slice(0, 20)}</b>
         {/* <Buttons/> */}
         <div className="buttons">
-          <span onClick={()=> handleRemove()}>-</span>
+          <span onClick={value >= 0 ? handleRemove: ""}>-</span>
           <span>{value <= 0 ? "Add" : value}</span>
           <span onClick={addToCart}>+</span>
           <span><Toaster 

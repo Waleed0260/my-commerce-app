@@ -1,34 +1,83 @@
-import React from 'react'
-import "./CartPage.css"
-import {BiShoppingBag} from "react-icons/bi"
-import {RxCross2} from "react-icons/rx"
+import React from "react";
+import "./CartPage.css";
+import { BiShoppingBag } from "react-icons/bi";
+import { RxCross2 } from "react-icons/rx";
+import { useStore } from "../../store/store";
+import toast, { Toaster } from "react-hot-toast";
+
+const CartPage = ({ open, onClose }) => {
+  const CartData = useStore((state) => state.cart);
+  const removePizza = useStore((state) => state.removePizza);
+
+  if (!open) return null;
+
+  const handleRemove = (i)=>{
+    removePizza(i);
+    toast.error("Items removed");
+  }
+
+  const total = ()=> CartData.pizzas.reduce((a,b)=> a+b.quantity * b.price, 120)
 
 
-
-const CartPage = ({open, onClose}) => {
-    if(!open) return null;
-
-    
 
   return (
     <div className="overlay">
-    <div className='CartPage'>
-        <div className='top-headline'>
-        <b><BiShoppingBag/>0 Item</b>
-            <span><RxCross2 onClick={onClose}/></span>
+      <div className="CartPage">
+        <div className="top-headline">
+          <b>
+            <BiShoppingBag />0 Item
+          </b>
+          <span>
+            <RxCross2 onClick={onClose}  style={{cursor: "pointer"}}/>
+          </span>
         </div>
-        <hr />
-        <div className="main">
-            <span><BiShoppingBag/></span>
-            <b>NO productsfound</b>
-        </div>
-        <div className='order' style={{backgroundColor: "white"}}>
-            <b>checkout</b>
-            <button>0.00$</button>
-        </div>
-    </div>
-    </div>
-  )
-}
+        <hr style={{ color: "black", width: "100%" }} />
+        <div className="Cartmain">
+          <div className="cart-products">
+            {CartData.pizzas.length > 0 &&
+              CartData.pizzas.map((pizza, i) => {
+                return (
+                  <>
+                    <div className="cart-items" key={i}>
+                      <div className="cart-img">
+                        <img src={pizza.image} alt="" />
+                        <div className="cart-det">
+                          <b>{pizza.title.slice(0, 20)}</b>
+                          <p>{pizza.price}</p>
+                        </div>
+                      </div>
 
-export default CartPage
+                      <div className="last">
+                        <b>{pizza.quantity}</b>
+                        <span>
+                          <RxCross2 onClick={()=>handleRemove(i)} />
+                        </span>
+                      </div>
+                    </div>
+                    <hr />
+                  </>
+                );
+              })}
+          </div>
+          {!CartData.pizzas.length > 0 && (
+            <>
+              <span>
+                <BiShoppingBag />
+              </span>
+              <b>NO productsfound</b>
+            </>
+          )}
+        </div>
+        <div className="totalprice">
+          <b>Checkout</b>
+          <button>
+            <b>$ {total()}</b>
+          </button>
+        </div>
+      </div>
+      <Toaster/>
+    </div>
+  );
+};
+
+export default CartPage;

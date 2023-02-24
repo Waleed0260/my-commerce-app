@@ -25,7 +25,7 @@ const Main = () => {
     </div>
     <Cards/>
     <Aside/>
-    <Cards/>
+    <Cart/>
     </>
   );
 };
