@@ -14,7 +14,6 @@ const Main = () => {
   const mobile = window.innerWidth <= 1000 ? true : false;
 
 
-  
   return (
     <>
     <div className="main">
@@ -26,7 +25,7 @@ const Main = () => {
     </div>
     <Cards/>
     <Aside/>
-    <Cart/>
+    <Cards/>
     </>
   );
 };

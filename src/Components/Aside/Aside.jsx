@@ -33,7 +33,6 @@ const Aside = () => {
     console.log(divAnimate);
     const onScroll = () => {
       if (divAnimate < window.scrollY) {
-        console.log("ok");
         div.current.style.position = "fixed";
         div.current.style.top = 0;
         div.current.style.left = 0;
