@@ -26,11 +26,12 @@ function Box({ items }) {
   }
 
   const addToCart = () => {
-    setValue(value + 1)
+
     addPizza({ ...items, price: price, quantity: value });
     toast.success("Added to cart");
   };
 
+  // const plus = useStore((state)=> state.cart.pizzas.length);
 
 
 
@@ -44,8 +45,8 @@ function Box({ items }) {
         {/* <Buttons/> */}
         <div className="buttons">
           <span onClick={value >= 0 ? handleRemove: ""}>-</span>
-          <span>{value <= 0 ? "Add" : value}</span>
-          <span onClick={addToCart}>+</span>
+          <span onClick={addToCart}>{value <= 0 ? "Add" : value}</span>
+          <span onClick={increase}>+</span>
           <span><Toaster 
             position="top-center"
             reverseOrder={false}/></span>

@@ -16,7 +16,7 @@ const CartPage = ({ open, onClose }) => {
     toast.error("Items removed");
   }
 
-  const total = ()=> CartData.pizzas.reduce((a,b)=> a+b.quantity * b.price, 120)
+  const total = ()=> CartData.pizzas.reduce((a,b)=> a+b.quantity * b.price, 0)
 
 
 
@@ -48,7 +48,7 @@ const CartPage = ({ open, onClose }) => {
                       </div>
 
                       <div className="last">
-                        <b>{pizza.quantity}</b>
+                        <b>{pizza.quantity * 10.00} $ </b>
                         <span>
                           <RxCross2 onClick={()=>handleRemove(i)} />
                         </span>

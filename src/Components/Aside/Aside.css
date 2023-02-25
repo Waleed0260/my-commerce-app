@@ -20,14 +20,9 @@ aside>ul{
 }
 
 ::-webkit-scrollbar {
-    width: 1px;
+    width: 0px;
   }
-  ::-webkit-scrollbar-track {
-    background: #f0eeee; 
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgb(110, 107, 107);
-  }
+
 aside>ul>li{
     list-style: none;
     color: rgb(75, 74, 72);
