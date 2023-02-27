@@ -93,3 +93,29 @@
     gap: 0.4rem;
 }
 
+@media screen and (max-width:480px) {
+    .CartPage{
+        width: 25rem;
+    }
+    .cart-items{
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .CartPage{
+        width: 20rem;
+        background-color: black;
+    }
+    .cart-items{
+        width: 16rem;
+    }
+}
+@media screen and (max-width:350px) {
+    .CartPage{
+        width: 17rem;
+    }
+    .cart-items{
+        width: 13rem;
+    }
+}
