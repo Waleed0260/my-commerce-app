@@ -10,8 +10,7 @@
 
 .CartPage{
     background-color: rgb(245, 243, 243);
-    height: 100vw;
-     width: 32rem;
+    width: 32rem;
     z-index: 10000;
     position: fixed;
     top: 0%;
@@ -19,6 +18,7 @@
     bottom: 0%;
     display: flex;
     flex-direction: column;
+    
 }
 
 
@@ -35,7 +35,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 34%;
+    height: 29rem;
 }
 .CartPage>.totalprice{
     display: flex;
@@ -43,7 +43,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 20px;
-    height: 5%;
+    height: 4rem;
     background-color: rgb(129, 120, 120);
     color: white;
     border-radius: 50px;
@@ -92,3 +92,4 @@
     display: flex;
     gap: 0.4rem;
 }
+
